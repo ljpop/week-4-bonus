@@ -45,8 +45,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /*TODO: check*/
   color: var(--white);
+  margin: 20px 0 20px 0;
 }
 
 .flex-container {
@@ -81,7 +82,7 @@ h1 {
   padding: 17px 0px;
   text-align: center;
   font-weight: 300;
-  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818); /*TODO: check*/
   border-radius: 10px;
 }
 
@@ -96,21 +97,40 @@ h1 {
 form {
   background-color: var(--white);
   color: var(--black-figma);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 40px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /*TODO: check*/
 }
 
 form p {
   line-height: 21px;
 }
 
+.errorMessage {
+  color: var(--orange-figma);
+  text-align: right;
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: 19px;
+  line-height: 11px;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.errorClass {
+  border: 1px solid var(--orange-figma); /*TODO:*/
+  color: var(--orange-figma);
+}
+
 form input {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid var(--gray);
+  border: 0.5px solid var(--gray);
   padding: 15px 32px;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   color: var(--black-figma);
   letter-spacing: 0.25px;
   font-weight: 600;
@@ -129,7 +149,7 @@ input[type="submit"] {
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818); /*TODO:check*/
 }
 
 input[type="submit"]:hover {
@@ -149,6 +169,7 @@ small span {
 }
 
 /*--------MEDIA-QUERIES--------*/
+
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 40px;
@@ -221,9 +242,15 @@ small span {
 
   form input {
     padding: 15px 20px;
+    margin-bottom: 1px;
   }
+
   .terms {
     line-height: 21px;
     margin: 0 15px;
+  }
+
+  .errorMessage {
+    margin-bottom: 5px;
   }
 }
