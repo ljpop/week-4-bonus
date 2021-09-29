@@ -17,9 +17,16 @@
   --purple-figma: #5e54a4;
   --green-figma: #38cc8b;
   --black-figma: #3d3b48;
+  --green-opacity: #77e2b3;
 
   --white: #fff;
   --gray: #dedede;
+}
+
+::placeholder {
+  color: var(--black-figma);
+  opacity: 0.75;
+  font-weight: 600px;
 }
 
 * {
@@ -75,7 +82,7 @@ h1 {
   text-align: center;
   font-weight: 300;
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .try-it p {
@@ -102,9 +109,12 @@ form input {
   width: 100%;
   border-radius: 5px;
   border: 1px solid var(--gray);
-  padding: 15px;
+  padding: 15px 32px;
   margin-bottom: 20px;
-  /*TODO: 1. placeholder font weight 2. color*/
+  color: var(--black-figma);
+  letter-spacing: 0.25px;
+  font-weight: 600;
+  outline-color: var(--purple-figma);
 }
 
 form input :last-child {
@@ -115,19 +125,28 @@ input[type="submit"] {
   background-color: var(--green-figma);
   border: none;
   color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--green-opacity);
 }
 
 small {
   font-size: 11px;
-  text-align: center;
   color: var(--grayish-blue);
 }
 small span {
   color: var(--orange-figma);
 }
 
-/*TODO: shadows*/
+.terms {
+  text-align: center;
+}
 
 /*--------MEDIA-QUERIES--------*/
 @media screen and (max-width: 1000px) {
@@ -200,7 +219,11 @@ small span {
     padding: 24px;
   }
 
-  form p {
+  form input {
+    padding: 15px 20px;
+  }
+  .terms {
     line-height: 21px;
+    margin: 0 15px;
   }
 }
