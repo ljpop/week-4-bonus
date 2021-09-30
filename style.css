@@ -36,6 +36,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
 body {
   font-size: 16px;
   line-height: 26px;
@@ -45,9 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh; /*TODO: check*/
   color: var(--white);
-  margin: 20px 0 20px 0;
 }
 
 .flex-container {
@@ -57,6 +60,7 @@ body {
   max-width: 1110px;
   width: 90%;
   gap: 45px;
+  padding: 5px 0;
 }
 
 .flex-item {
@@ -121,8 +125,14 @@ form p {
 }
 
 .errorClass {
-  border: 1px solid var(--orange-figma); /*TODO:*/
+  border: 1px solid var(--orange-figma);
   color: var(--orange-figma);
+}
+
+.error-icon {
+  background: url("/images/icon-error.svg");
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
 }
 
 form input {
@@ -139,6 +149,17 @@ form input {
 
 form input :last-child {
   margin-bottom: 0px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:focus {
+  border: 0.5px solid var(--purple-figma); /*--GRAY 5E54A4*/
+  color: var(--black-figma);
+  background: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /*TODO:check*/
 }
 
 input[type="submit"] {
@@ -206,6 +227,9 @@ small span {
 }
 
 @media screen and (max-width: 700px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
   .flex-container {
     flex-direction: column;
     margin: 0 24px;
@@ -242,7 +266,7 @@ small span {
 
   form input {
     padding: 15px 20px;
-    margin-bottom: 1px;
+    /*TODO: margin-bottom: 2px; */
   }
 
   .terms {
@@ -251,6 +275,6 @@ small span {
   }
 
   .errorMessage {
-    margin-bottom: 5px;
+    /*TODO: margin-bottom: 3px; */
   }
 }
