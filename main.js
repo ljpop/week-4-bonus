@@ -90,6 +90,12 @@ const doCheck = function (event) {
 const checkInput = function (id) {
   if (counter) {
     getInfo(id);
-    if (checkEmpty(id)) checkEmpty(id);
+    if (id == "mail") {
+      if (checkEmpty("mail")) {
+        checkEmpty("mail");
+      } else {
+        checkWrong(errorWrong, "mail");
+      }
+    } else if (checkEmpty(id)) checkEmpty(id);
   }
 };
