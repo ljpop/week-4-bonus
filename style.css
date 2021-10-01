@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /*Primary*/
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  /*Accent*/
+  --blue: hsl(248, 32%, 49%);
+
+  /*Neutral*/
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+
+  /*Figma*/
+  --orange-figma: #ff7979;
+  --purple-figma: #5e54a4;
+  --green-figma: #38cc8b;
+  --black-figma: #3d3b48;
+  --green-opacity: #77e2b3;
+
+  --white: #fff;
+  --gray: #dedede;
+}
+
+::placeholder {
+  color: var(--black-figma);
+  opacity: 0.75;
+  font-weight: 600px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: #ff7979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--white);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1110px;
+  width: 90%;
+  gap: 45px;
+  /* padding: 5px 0; */
+}
+
+.flex-item {
+  flex: 1;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: -0.52px;
+  margin-bottom: 11px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.try-it {
+  background-color: var(--purple-figma);
+  font-size: 15px;
+  margin-bottom: 24px;
+  padding: 17px 0px;
+  text-align: center;
+  font-weight: 400;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border-radius: 10px;
+}
+
+.try-it span {
+  font-weight: 700;
+}
+
+form {
+  background-color: var(--white);
+  color: var(--black-figma);
+  border-radius: 10px;
+  padding: 40px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+form p {
+  line-height: 21px;
+}
+
+.errorMessage {
+  color: var(--orange-figma);
+  text-align: right;
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: 19px;
+  line-height: 11px;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.errorClass {
+  border: 1px solid var(--orange-figma);
+  color: var(--orange-figma);
+}
+
+.error-icon {
+  background: url("/images/icon-error.svg");
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+
+form input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 26px;
+  border-radius: 5px;
+  border: 0.5px solid var(--gray);
+  padding: 14px 32px;
+  margin-bottom: 6px;
+  color: var(--black-figma);
+  letter-spacing: 0.25px;
+  font-weight: 600;
+  outline-color: var(--purple-figma);
+}
+
+form input :last-child {
+  margin-bottom: 0px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input,
+[contenteditable] {
+  caret-color: var(--purple-figma);
+}
+
+input:focus {
+  border: 0.5px solid var(--purple-figma);
+  color: var(--black-figma);
+  background: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+input[type="submit"] {
+  background-color: var(--green-figma);
+  border: none;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--green-opacity);
+}
+
+small {
+  font-size: 11px;
+  color: var(--grayish-blue);
+}
+small span {
+  font-weight: 600;
+  color: var(--orange-figma);
+}
+
+.terms {
+  text-align: center;
+}
+
+/*--------MEDIA-QUERIES--------*/
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.29px;
+    margin-bottom: 16px;
+  }
+
+  .flex-container {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .flex-container {
+    flex-direction: column;
+    margin: 88px 24px 68px 24px;
+    gap: 64px;
+  }
+
+  h1 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: -0.29px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .try-it {
+    padding: 18px 0px;
+  }
+  .flex-item {
+    max-width: 500px;
+  }
+
+  .try-it p {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  form {
+    padding: 24px;
+  }
+
+  form input {
+    padding: 14px 20px;
+  }
+
+  .terms {
+    line-height: 21px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
