@@ -60,7 +60,7 @@ body {
   max-width: 1110px;
   width: 90%;
   gap: 45px;
-  padding: 5px 0;
+  /* padding: 5px 0; */
 }
 
 .flex-item {
@@ -85,17 +85,13 @@ h1 {
   margin-bottom: 24px;
   padding: 17px 0px;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
   border-radius: 10px;
 }
 
-.try-it p {
-  text-align: center;
-}
-
 .try-it span {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 form {
@@ -137,9 +133,11 @@ form p {
 
 form input {
   width: 100%;
+  font-size: 14px;
+  line-height: 26px;
   border-radius: 5px;
   border: 0.5px solid var(--gray);
-  padding: 15px 32px;
+  padding: 14px 32px;
   margin-bottom: 6px;
   color: var(--black-figma);
   letter-spacing: 0.25px;
@@ -187,6 +185,7 @@ small {
   color: var(--grayish-blue);
 }
 small span {
+  font-weight: 600;
   color: var(--orange-figma);
 }
 
@@ -209,41 +208,16 @@ small span {
   }
 }
 
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 35px;
-    line-height: 30px;
-    letter-spacing: -0.29px;
-    margin-bottom: 16px;
-  }
-
-  .flex-container {
-    gap: 10px;
-  }
-
-  .try-it p {
-    max-width: 60%;
-    margin: 0 auto;
-  }
-
-  form {
-    padding: 30px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  body {
-    background-image: url("images/bg-intro-mobile.png");
-  }
+@media screen and (max-width: 880px) {
   .flex-container {
     flex-direction: column;
-    margin: 0 24px;
+    margin: 88px 24px 68px 24px;
     gap: 64px;
   }
 
   h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 35px;
+    line-height: 40px;
     letter-spacing: -0.29px;
     margin-bottom: 16px;
     text-align: center;
@@ -276,5 +250,16 @@ small span {
   .terms {
     line-height: 21px;
     margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
   }
 }

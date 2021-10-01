@@ -18,7 +18,7 @@
   <body>
     <div class="flex-container">
       <div class="flex-item">
-        <h1>Learn to code by <br>watching others</h1>
+        <h1>Learn to code by <br />watching others</h1>
         <p>
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
@@ -26,27 +26,63 @@
         </p>
       </div>
       <div class="flex-item form-container">
-        <div class='try-it'><p><span>Try it free 7 days</span> then $20/mo. thereafter</p></div>
+        <div class="try-it">
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
         <form autocomplete="off">
-          <input class='input-form' type="text" id="fname" name="fname" placeholder="First Name" ><br>    
-          <p class="errorMessage errorMessage1">Lorem ipsum dolor sit amet </p>    
+          <input
+            onBlur="checkInput(this.id)"
+            class="input-form"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+          /><br />
+          <p class="errorMessage errorMessage1">Lorem ipsum dolor sit amet</p>
 
-          <input class='input-form' type="text" id="lname" name="lname" placeholder="Last Name" ><br>
+          <input
+            onBlur="checkInput(this.id)"
+            class="input-form"
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+          /><br />
           <p class="errorMessage errorMessage2">Lorem ipsum dolor sit amet</p>
 
-          <input class='input-form' type="email" id="mail" name="mail" placeholder="Email Address" ><br>
-          <p class="errorMessage errorMessage3">Lorem ipsum dolor sit amet</p> 
+          <input
+            onBlur="checkInput(this.id)"
+            class="input-form"
+            type="email"
+            id="mail"
+            name="mail"
+            placeholder="Email Address"
+          /><br />
+          <p class="errorMessage errorMessage3">Lorem ipsum dolor sit amet</p>
 
-          <input class='input-form' type="password" id="password" name="password" placeholder="Password" ><br>
+          <input
+            onBlur="checkInput(this.id)"
+            class="input-form"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          /><br />
           <p class="errorMessage errorMessage4">Lorem ipsum dolor sit amet</p>
 
-          <input class='submit-button' onclick="doCheck(event)" type="submit" value="Claim your free trial"><br>          
-          <p class='terms'><small
-          >By clicking the button, you are agreeing to our
-          <span>Terms and Services</span></small
-        ></p>
+          <input
+            class="submit-button"
+            onclick="doCheck(event)"
+            type="submit"
+            value="Claim your free trial"
+          /><br />
+          <p class="terms">
+            <small
+              >By clicking the button, you are agreeing to our
+              <span>Terms and Services</span></small
+            >
+          </p>
         </form>
-
       </div>
     </div>
     <script src="main.js"></script>
